@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Build output
+src/dist/
+
+# Tauri build output
+src-tauri/target/
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+bash.exe.stackdump
+
+# Claude Code
+.claude/

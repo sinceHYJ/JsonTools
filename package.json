@@ -1,0 +1,13 @@
+{
+  "name": "json-tools",
+  "version": "1.0.0",
+  "description": "A lightweight JSON desktop tool",
+  "scripts": {
+    "dev": "tauri dev",
+    "build": "tauri build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.10.1"
+  }
+}
