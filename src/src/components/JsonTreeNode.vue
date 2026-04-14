@@ -113,15 +113,12 @@ const indentPx = 20
 </script>
 
 <template>
-  <div class="json-node" :style="{ paddingLeft: depth * indentPx + 'px' }">
+  <div class="json-node" :style="{ paddingLeft: depth > 0 ? indentPx + 'px' : '0px' }">
     <!-- 对象/数组节点 -->
     <div v-if="isObject" class="json-node-row">
-      <span class="json-toggle" @click="toggle">
-        <svg v-if="isCollapsed" viewBox="0 0 16 16" width="14" height="14" fill="currentColor">
-          <path d="M6 3l5 5-5 5z"/>
-        </svg>
-        <svg v-else viewBox="0 0 16 16" width="14" height="14" fill="currentColor">
-          <path d="M3 6l5 5 5-5z"/>
+      <span class="json-toggle" :class="{ collapsed: isCollapsed }" @click="toggle">
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor">
+          <path d="M6 4l4 4-4 4z"/>
         </svg>
       </span>
       <span v-if="keyName" class="json-key">"{{ escapeHtml(keyName) }}"</span>
