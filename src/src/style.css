@@ -450,3 +450,245 @@ textarea.input-area::placeholder {
   from { opacity: 1; }
   to { opacity: 0; }
 }
+
+/* Tool tabs */
+.tool-tabs {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 12px;
+  height: 100%;
+}
+
+.tool-tab {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 14px;
+  border: none;
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 13px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  font-weight: 500;
+}
+
+.tool-tab:hover {
+  background: var(--btn-hover);
+  color: var(--text);
+}
+
+.tool-tab.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Timestamp converter */
+.ts-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 20px 24px;
+  gap: 16px;
+}
+
+.ts-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--panel-bg);
+  color: var(--text);
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 18px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.ts-input:focus {
+  border-color: var(--accent);
+}
+
+.ts-input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.5;
+  font-size: 14px;
+}
+
+.ts-precision-group {
+  display: flex;
+  gap: 4px;
+}
+
+.ts-precision-group .tool-btn {
+  font-size: 12px;
+  padding: 3px 10px;
+}
+
+.ts-result-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 16px;
+}
+
+.ts-result-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+  gap: 12px;
+}
+
+.ts-result-row + .ts-result-row {
+  border-top: 1px solid var(--border);
+}
+
+.ts-result-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  min-width: 70px;
+}
+
+.ts-result-value {
+  flex: 1;
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 14px;
+  word-break: break-all;
+  text-align: right;
+}
+
+.ts-current-time .ts-result-value {
+  text-align: left;
+}
+
+.ts-error {
+  color: var(--error);
+  font-size: 13px;
+  padding: 8px 0;
+}
+
+.ts-section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.ts-timezone-select {
+  padding: 3px 6px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Decrypt tool */
+.decrypt-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 20px 24px;
+  gap: 12px;
+}
+
+.decrypt-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.decrypt-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.decrypt-hint {
+  font-weight: 400;
+  font-size: 11px;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+.decrypt-textarea {
+  height: 140px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.6;
+  background: var(--panel-bg);
+  color: var(--text);
+  outline: none;
+  resize: vertical;
+  transition: border-color 0.15s;
+}
+
+.decrypt-textarea:focus {
+  border-color: var(--accent);
+}
+
+.decrypt-textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.5;
+}
+
+.decrypt-custom-key {
+  padding: 3px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Consolas", "Monaco", "Courier New", monospace;
+  font-size: 12px;
+  outline: none;
+  width: 200px;
+}
+
+.decrypt-custom-key:focus {
+  border-color: var(--accent);
+}
+
+.decrypt-action {
+  display: flex;
+  justify-content: center;
+}
+
+.decrypt-btn {
+  padding: 8px 32px;
+  border: none;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.decrypt-btn:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.decrypt-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.decrypt-error {
+  color: var(--error);
+  font-size: 13px;
+  padding: 4px 0;
+}
