@@ -26,16 +26,18 @@ npm run build
 # 仅构建前端
 cd src && npm run build   # vue-tsc 类型检查 + vite build
 
-# 构建 NSIS 安装包
-npx tauri build --bundles nsis
-```
+# 构建 NSIS 安装包（推荐使用项目脚本，会自动设置 GNU 工具链 PATH）
+scripts/build.bat
+# 或直接运行：
+D:/cp/project/json-tools/scripts/build.bat
+# 产物路径：src-tauri/target/release/bundle/nsis/JSON Tools_1.1.0_x64-setup.exe
 
 ## Toolchain
 
 - **平台**: 仅限 Windows，使用 GNU Rust 工具链（x86_64-pc-windows-gnu）
 - **链接器**: MSYS2/MinGW (`C:\msys64\mingw64\bin\gcc.exe`)
 - **前端**: Vite 8.x + Vue 3.5.x + TypeScript 6.x
-- **构建产物**: `src-tauri/target/release/bundle/nsis/JSON Tools_1.0.0_x64-setup.exe`
+- **构建产物**: `src-tauri/target/release/bundle/nsis/JSON Tools_<version>_x64-setup.exe`
 
 ## Architecture
 
