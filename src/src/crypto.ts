@@ -48,9 +48,9 @@ export async function decrypt(ciphertext: string, key: string): Promise<string> 
   let decrypted: ArrayBuffer
   try {
     decrypted = await crypto.subtle.decrypt(
-      { name: 'AES-CBC', iv: ivBytes },
+      { name: 'AES-CBC', iv: ivBytes as Uint8Array<ArrayBuffer> },
       cryptoKey,
-      cipherBytes,
+      cipherBytes as Uint8Array<ArrayBuffer>,
     )
   } catch {
     throw new Error('解密失败，请检查密钥和密文是否匹配')
