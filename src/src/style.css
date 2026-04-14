@@ -596,13 +596,17 @@ textarea.input-area::placeholder {
   flex-direction: column;
   overflow-y: auto;
   padding: 20px 24px;
-  gap: 12px;
+  gap: 16px;
 }
 
 .decrypt-section {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
 }
 
 .decrypt-section-header {
@@ -622,6 +626,7 @@ textarea.input-area::placeholder {
 }
 
 .decrypt-textarea {
+  width: 100%;
   height: 140px;
   border: 1px solid var(--border);
   border-radius: 6px;

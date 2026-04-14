@@ -97,7 +97,7 @@ function onKeyModeChange(custom: boolean) {
         <span class="decrypt-hint">格式：[16字符IV] + [Base64密文]</span>
       </div>
       <textarea
-        class="input-area decrypt-textarea"
+        class="decrypt-textarea"
         v-model="ciphertext"
         placeholder="粘贴完整密文（包含 16 字符 IV 前缀）"
         spellcheck="false"
@@ -120,7 +120,7 @@ function onKeyModeChange(custom: boolean) {
         <button v-if="result" class="small-btn" @click="copyResult">复制</button>
       </div>
       <textarea
-        class="input-area decrypt-textarea"
+        class="decrypt-textarea"
         :value="result"
         readonly
         placeholder="解密结果将显示在这里"
