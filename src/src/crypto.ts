@@ -4,8 +4,8 @@ export interface PresetKey {
 }
 
 export const PRESET_KEYS: PresetKey[] = [
-  { label: 'webpay', value: 'webpay24K8manger' },
   { label: 'member', value: 'member24K8manger' },
+  { label: 'webpay', value: 'webpay24K8manger' },
 ]
 
 export async function decrypt(ciphertext: string, key: string): Promise<string> {
